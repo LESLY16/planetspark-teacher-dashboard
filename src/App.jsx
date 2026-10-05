@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Header from "./components/Header";
-import Sidebar from "./components/sidebar";
+import Sidebar from "./components/Sidebar";
 import SummaryCards from "./components/SummaryCards";
 import ClassesList from "./components/ClassesList";
 import StudentList from "./components/StudentList";
