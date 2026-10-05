@@ -1,0 +1,417 @@
+:root {
+  --bg-light: #f5f7fb;
+  --bg-dark: #12141f;
+  --card-light: #ffffff;
+  --card-dark: #1e2130;
+  --text-light: #1f2430;
+  --text-dark: #f5f7fb;
+  --accent-blue: #4b7bec;
+  --accent-purple: #8854d0;
+  --accent-orange: #fd9644;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+.app.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.main {
+  flex: 1;
+  padding: 24px;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 220px;
+  background: #1e2130;
+  color: #f5f7fb;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.sidebar li.active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent-blue);
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.icon-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+}
+
+/* Summary cards */
+
+.summary-cards {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  flex: 1;
+  border-radius: 16px;
+  padding: 16px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-blue {
+  background: linear-gradient(135deg, #4b7bec, #3867d6);
+}
+
+.gradient-purple {
+  background: linear-gradient(135deg, #8854d0, #a55eea);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, #fd9644, #fa8231);
+}
+
+.card-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.card-number {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.card-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* Panels */
+
+.panel {
+  background: var(--card-light);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.app.dark .panel {
+  background: var(--card-dark);
+}
+
+.panel-header {
+  margin-bottom: 12px;
+}
+
+.panel-subtitle {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Layout */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.content-grid.bottom {
+  grid-template-columns: 1.2fr 1.8fr;
+}
+
+/* Classes */
+
+.class-card {
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: rgba(15, 23, 42, 0.02);
+}
+
+.app.dark .class-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.class-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.class-time {
+  font-weight: 600;
+}
+
+.class-student {
+  font-size: 14px;
+}
+
+.class-topic {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.class-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  background: var(--accent-blue);
+  color: white;
+}
+
+button.secondary {
+  background: var(--accent-orange);
+}
+
+button.outline {
+  background: transparent;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: inherit;
+}
+
+/* Status badges */
+
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.status-scheduled {
+  background: rgba(59, 130, 246, 0.15);
+  color: #1d4ed8;
+}
+
+.status-completed {
+  background: rgba(34, 197, 94, 0.15);
+  color: #15803d;
+}
+
+.status-cancelled {
+  background: rgba(239, 68, 68, 0.15);
+  color: #b91c1c;
+}
+
+/* Students */
+
+.search-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.student-card {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  background: rgba(15, 23, 42, 0.02);
+  cursor: pointer;
+}
+
+.app.dark .student-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.student-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+}
+
+.student-info {
+  flex: 1;
+}
+
+.student-name {
+  font-weight: 600;
+}
+
+.student-level {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.4);
+  margin: 6px 0;
+}
+
+.progress-bar.large {
+  height: 10px;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent-blue);
+}
+
+/* Demo tracker */
+
+.demo-summary {
+  margin: 12px 0;
+}
+
+.demo-number {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.demo-label {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* Demo history */
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.demo-table th,
+.demo-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.demo-table thead {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+/* Modal */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: var(--card-light);
+  border-radius: 16px;
+  padding: 16px;
+  width: 320px;
+}
+
+.app.dark .modal {
+  background: var(--card-dark);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
